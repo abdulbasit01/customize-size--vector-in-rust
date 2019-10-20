@@ -1,26 +1,19 @@
-fn main(){
-    println!("Check" );
-    difference();
-    
-}
 use std::io;
-fn sum (){
-    println!("How many numbers you want to add");
-    let mut a = String::new();
-    io::stdin().read_line(&mut a);
-    let number : i32 =a.trim().parse().unwrap();
-    let mut i =0;
-    while i !=number{
-        let mut a = String::new();
-        io::stdin().read_line(&mut a);
-        let mut _type : i32 =a.trim().parse().unwrap();
-        let mut number=_type;
-        number+=_type;
-        _type=number;
-        println!("{}",_type ) ;
-        // println!("{}",_type );
-        i=i+1
-    }
-    
+fn main(){
+    sum()
 }
-// 
+fn sum(){
+    let mut a = String::new();
+    println!("How many number you want to add");
+    io::stdin().read_line(&mut a);
+    let _type1 : i32 =a.trim().parse().unwrap();
+    let mut v: Vec<i32> = Vec::new();
+    for i in 0.._type1{
+        let mut a = String::new();
+        println!("Enter your numnber");
+        io::stdin().read_line(&mut a);
+        let _type2 : i32 =a.trim().parse().unwrap();
+        v.push(_type2);
+    }
+    println!("{:?}",v )
+}
